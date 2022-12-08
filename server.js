@@ -3,13 +3,16 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 // Getting environment variables
+// 获取环境变量
 const dotenv = require("dotenv");
 
 // Setting up server
+// 使用express框架 搭建服务器
 const express = require("express");
 const app = express();
 
 // Configuration files
+// 根据 环境变量 从config文件夹读取 不同的配置文件
 let config = require("config"); // we load the db location from the JSON files
 const dbHost = config.get("dbConfig.host");
 const configPort = config.get("dbConfig.port");
@@ -17,6 +20,7 @@ dotenv.config();
 
 
 // Config Cors
+// 配置跨域
 let corsOption = 
   { origin: '*'};
 app.use(cors(corsOption));
