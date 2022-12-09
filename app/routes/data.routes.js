@@ -1,5 +1,6 @@
 module.exports = app => {
   const express = require("express");
+  // Router组件用来定义 REST APIs的url路径
   const router = express.Router();
   const data = require("../controllers/data.controller.js");
 
